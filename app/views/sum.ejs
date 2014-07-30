@@ -12,19 +12,10 @@
        <a href="/checkers">Checkers</a>
        <a href="/add">Add</a>
    </nav>
-    <h1 style = "color:black; background-color:red;">Checker Board</h1>
-    
-    <table>
-    <tbody> 
-      <% for (var i = 0; i < 8; i++) { %>
-        <tr height:50px> 
-        <% for (var j = 0; j < 8; j++) { %>
-            <td> </td>
-      <% } %>
-   </tr>
- <% } %>
- </tbody>
-   </table>
+    <h1>Sum</h1>
+   <%var sum = w+x+y+z%>
+   <%var color =(sum%2) ? 'red':'blue'%>
+   <h2 style= "font-size:<%=fontsize%>; border-style: solid; border-width:<%=bwid%>px; border-color:<%=bcolor%>;"><%= w%>+<%= x%>+<%=y%>+<%=z%>=<span style="color:<%=color%>;"><%=sum%></span></h2>
     
     </body>
 </html>

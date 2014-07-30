@@ -19,6 +19,19 @@ app.get('/checkers', function(req, res){
       res.render('checkers');
 });
 
+app.get('/add/:w/:x/:y/:z', function(req, res){
+  req.params.w*=1;    
+  req.params.x*=1;
+  req.params.y*=1;
+  req.params.z*=1;
+
+  req.params.fontsize=req.query.fontsize;
+  req.params.bcolor=req.query.color;
+  req.params.bwid=req.query.borderwidth;
+
+  res.render('sum', req.params);
+});
+
 
 
 app.listen(process.env.PORT, function(){
