@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Checkers</title>
+    <link rel="stylesheet" href="/css/sum_style.css">
+  </head>
+  <body>
+    <nav>
+       <a href="/">Home</a>
+       <a href="/checkers">Checkers</a>
+       <a href="/add">Add</a>
+       <a href="/sumlist">Sum List</a>
+   </nav>
+    <h1 style = "color:black; background-color:red;">Add the Values</h1>
+    <table>
+    <tbody> 
+ <%var total = 0;%>
+      <% for (var i = 0; i < a.length; i++) { %>
+        <%var numColor =(a[i]%2) ? ocolor :ecolor%>
+        <% total = total+ a[i]; %>
+        <tr > 
+          <td style="color:<%=numColor%>"> <%=a[i]%></td>
+        </tr>
+      <% } %>
+      
+      <tr>
+        <td><%= total %> </td> 
+   </tr>
+ </tbody>
+   </table>
+    
+    </body>
+</html>

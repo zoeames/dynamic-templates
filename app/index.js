@@ -32,6 +32,14 @@ app.get('/add/:w/:x/:y/:z', function(req, res){
   res.render('sum', req.params);
 });
 
+app.get('/sumlist/:a', function(req, res){
+  req.params.a=req.params.a.split(',');
+  req.params.a=req.params.a.map(function(x){return x*1;});
+  req.params.ecolor=req.query.even;
+  req.params.ocolor=req.query.odd;
+  res.render('sumlist',req.params);
+});
+
 
 
 app.listen(process.env.PORT, function(){

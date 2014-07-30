@@ -1,0 +1,26 @@
+
+table{
+  border: 1px solid grey;
+  padding: 0px;
+  text-align:center;
+  margin-left: auto;
+      margin-right: auto;
+}
+
+table td{
+  padding: 0px;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  background-size: cover;
+}
+
+/*even rows grey*/
+table tr:nth-child(2n) td:nth-child(n){
+  background-color: grey;
+}
+
+/*final row red*/
+table tr:last-child td:nth-child(n){
+  background-color: red;
+}
