@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Checkers</title>
-    <link rel="stylesheet" href="/css/sum_style.css">
+    <link rel="stylesheet" href="/css/dice_style.css">
   </head>
   <body>
     <nav>
@@ -13,23 +13,16 @@
        <a href="/sumlist">Sum List</a>
        <a href="/rolldice">Dice</a>
    </nav>
-    <h1 style = "color:black; background-color:red;">Add the Values</h1>
+   <h1>Dice</h1>
+      
     <table>
     <tbody> 
- <%var total = 0;%>
-      <% for (var i = 0; i < a.length; i++) { %>
-        <%var numColor =(a[i]%2) ? ocolor :ecolor%>
-        <% total = total+ a[i]; %>
+      <% for (var j = 0; j < nums.length; j++) { %>
         <tr > 
-          <td style="color:<%=numColor%>"> <%=a[i]%></td>
+          <td style="background-image:<%=pic[j]%>"> </td>
         </tr>
       <% } %>
-      
-      <tr>
-        <td><%= total %> </td> 
-   </tr>
  </tbody>
    </table>
-    
     </body>
 </html>

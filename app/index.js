@@ -40,6 +40,31 @@ app.get('/sumlist/:a', function(req, res){
   res.render('sumlist',req.params);
 });
 
+app.get('/rolldice/:a', function(req, res){
+  req.params.a*=1;    
+   var nums=[];
+   var pic=[];
+   for (var i = 0; i < req.params.a; i++) {
+     var roll = Math.floor(Math.random()*6+1);
+     nums.push(roll);
+   } 
+
+   for(var j=0; j<nums.length; j++){
+     if(nums[j]===1){
+     pic[j]='url(/images/dice1.png)';
+     }else if(nums[j]===2){
+     pic[j]='url(/images/dice2.png)';
+     }else if(nums[j]===3){
+     pic[j]='url(/images/dice3.png)';
+     }else if(nums[j]===4){
+     pic[j]='url(/images/dice4.png)';
+     }else if(nums[j]===5){
+     pic[j]='url(/images/dice5.png)';
+     }else{pic[j]='url(/images/dice6.png)';}
+   }
+   console.log(pic);
+  res.render('rolldice',{nums:nums, pic:pic});
+});
 
 
 app.listen(process.env.PORT, function(){
